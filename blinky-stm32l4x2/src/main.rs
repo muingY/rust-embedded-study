@@ -1,8 +1,10 @@
 #![no_std]
 #![no_main]
 
+extern crate panic_halt;
+
 use cortex_m_rt::entry;
-use panic_halt as _;
+use cortex_m_semihosting::hprintln;
 use stm32l4xx_hal::{
     prelude::*,
     delay::Delay,
@@ -21,12 +23,13 @@ fn main() -> ! {
     let mut gpio_b = device.GPIOB.split(&mut rcc.ahb2);
     let mut led = gpio_b.pb3.into_push_pull_output(&mut gpio_b.moder, &mut gpio_b.otyper);
 
-    let mut timer = Delay::new(core.SYST, clocks);
+    hprintln!("Debug message test.").unwrap();
 
+    let mut timer = Delay::new(core.SYST, clocks);
     loop {
-        timer.delay_ms(1000 as u32);
+        timer.delay_ms(1000u32);
         led.set_high().unwrap();
-        timer.delay_ms(1000 as u32);
+        timer.delay_ms(1000u32);
         led.set_low().unwrap();
     }
 }
