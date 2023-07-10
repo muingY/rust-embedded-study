@@ -17,16 +17,17 @@ fn main() -> ! {
     let gpioa = peripheral.GPIOA.split();
     let mut led = gpioa.pa5.into_push_pull_output();
 
-    let gpioc = peripheral.GPIOC.split();
-    let button = gpioc.pc13;
+    // let gpioc = peripheral.GPIOC.split();
+    // let button = gpioc.pc13;
 
-    led.set_low();
+    // led.set_high();
 
     loop {
-        if button.is_low() {
-            led.set_high();
-        } else {
-            led.set_low();
-        }
+        // if button.is_low() {
+        //     led.set_high();
+        // } else {
+        //     led.set_low();
+        // }
+        led.set_high();
     }
 }

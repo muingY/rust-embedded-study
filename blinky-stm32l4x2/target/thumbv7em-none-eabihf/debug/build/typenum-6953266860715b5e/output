@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/muing/Dev/rust-embedded-study/blinky-stm32l4x2/target/thumbv7em-none-eabihf/debug/build/typenum-6953266860715b5e/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/muing/Dev/rust-embedded-study/blinky-stm32l4x2/target/thumbv7em-none-eabihf/debug/build/typenum-6953266860715b5e/out/op.rs

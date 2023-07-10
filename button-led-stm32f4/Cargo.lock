@@ -51,6 +51,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
+name = "button-led-stm32f4"
+version = "0.1.0"
+dependencies = [
+ "cortex-m 0.6.7",
+ "cortex-m-rt",
+ "cortex-m-semihosting",
+ "embedded-hal 0.2.7",
+ "panic-halt",
+ "rtt-target",
+ "stm32f4xx-hal",
+]
+
+[[package]]
 name = "cortex-m"
 version = "0.6.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -309,19 +322,6 @@ dependencies = [
  "stm32f4",
  "time",
  "void",
-]
-
-[[package]]
-name = "stm32f4xxgpio"
-version = "0.1.0"
-dependencies = [
- "cortex-m 0.6.7",
- "cortex-m-rt",
- "cortex-m-semihosting",
- "embedded-hal 0.2.7",
- "panic-halt",
- "rtt-target",
- "stm32f4xx-hal",
 ]
 
 [[package]]
