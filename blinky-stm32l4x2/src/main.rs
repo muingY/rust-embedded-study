@@ -27,9 +27,19 @@ fn main() -> ! {
 
     let mut timer = Delay::new(core.SYST, clocks);
     loop {
-        timer.delay_ms(1000u32);
+        timer.delay_ms(300u32);
         led.set_high().unwrap();
-        timer.delay_ms(1000u32);
+        timer.delay_ms(300u32);
+        led.set_low().unwrap();
+
+        timer.delay_ms(300u32);
+        led.set_high().unwrap();
+        timer.delay_ms(300u32);
+        led.set_low().unwrap();
+
+        timer.delay_ms(300u32);
+        led.set_high().unwrap();
+        timer.delay_ms(700u32);
         led.set_low().unwrap();
     }
 }
