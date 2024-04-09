@@ -12,8 +12,10 @@ async fn main(_spawner: Spawner) {
     let p = embassy_stm32::init(Default::default());
     info!("Hello World!");
 
-    let mut led = Output::new(p.PB3, Level::High, Speed::Low); // STM32 default LED = PB3
+    // GPIOs set
+    let mut led = Output::new(p.PB3, Level::High, Speed::Low);
 
+    // Loop
     loop {
         led.set_high();
         Timer::after_millis(300).await;
