@@ -3,7 +3,7 @@
 
 use defmt::*;
 use embassy_executor::Spawner;
-use embassy_stm32::{adc::Adc, exti::ExtiInput, gpio::{Input, Level, Output, Pull, Speed}};
+use embassy_stm32::{adc::Adc, exti::ExtiInput, gpio::{Input, Pull}};
 use embassy_time::Delay;
 use {defmt_rtt as _, panic_probe as _};
 
